@@ -64,6 +64,13 @@ class ViewController: UIViewController,
     // Exercise 1: Assign the result of MushroomGenerator.maybeGenerateMushroomPowerup()
     // to a variable. Print something if it's not nil
     // ...
+    let powerup = MushroomGenerator.maybeGenerateMushroomPowerup()
+    if powerup != nil {
+        print("Got a powerup!")
+    }
+    else {
+        print("Didn't get a powerup.")
+    }
     
     // Exercise 2: Use the powerup on Mario using the useMushroomPowerupOnMario function
     // ...
