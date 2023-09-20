@@ -64,16 +64,19 @@ class ViewController: UIViewController,
     // Exercise 1: Assign the result of MushroomGenerator.maybeGenerateMushroomPowerup()
     // to a variable. Print something if it's not nil
     // ...
-    let powerup = MushroomGenerator.maybeGenerateMushroomPowerup()
+    /* let powerup = MushroomGenerator.maybeGenerateMushroomPowerup()
     if powerup != nil {
         print("Got a powerup!")
     }
     else {
         print("Didn't get a powerup.")
-    }
+    } */
     
     // Exercise 2: Use the powerup on Mario using the useMushroomPowerupOnMario function
     // ...
+      if let powerup = MushroomGenerator.maybeGenerateMushroomPowerup() { // if the result is non-nil, assign the result to the powerup variable and run the logic inside
+          useMushroomPowerupOnMario(powerup: powerup) // 'powerup' is now of type 'MushroomPowerup', 'powerup' is only accessible from inside the if-let curly brace
+      }
   }
   
   private func useMushroomPowerupOnMario(powerup: MushroomPowerup) {
